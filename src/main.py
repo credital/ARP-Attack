@@ -68,5 +68,5 @@ class _ARP:
 
 
 if __name__ == "__main__":
-    arp_model = _ARP(input("Victim IP: ").strip(), attack_length=25)
+    arp_model = _ARP(input("Victim IP: ").strip(), attack_length=int(input("Attack length: ").strip()))
     arp_model.start()

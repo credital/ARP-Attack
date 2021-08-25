@@ -17,7 +17,7 @@ class _ARP:
         new_thread(target=break_on_timer).start()
 
     def get_mac_address(self, ip):
-        res, _ = srp(Ether(dst = "ff:ff:ff:ff:ff:ff")/ARP(pdst=ip), timeout=2)
+        res, _ = srp(Ether(dst = "ff:ff:ff:ff:ff:ff")/ARP(pdst=ip), timeout=4)
         if res:
             return res[0][1].src
 

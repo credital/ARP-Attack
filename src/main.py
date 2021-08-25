@@ -56,8 +56,8 @@ class _ARP:
     def start(self):
         try:
             while self.running:
-                self.send_spoof_packet(self.target_ip, self.gateway_ip, 0)
-                self.send_spoof_packet(self.gateway_ip, self.target_ip, 0)
+                self.send_spoof_packet(self.target_ip, self.gateway_ip)
+                self.send_spoof_packet(self.gateway_ip, self.target_ip)
                 time.sleep(1)
 
             raise KeyboardInterrupt()
